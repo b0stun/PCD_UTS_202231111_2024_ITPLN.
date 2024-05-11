@@ -144,13 +144,13 @@ Dengan kode ini, kita menghasilkan gambar dengan empat subplot yang menampilkan 
 
 7. KONTRAS GAMBAR
 
-# Membaca gambar
+#Membaca gambar
 color_image = cv2.imread('Namaku.jpg')
 
-# Konversi citra ke dalam ruang warna HSV
+#Konversi citra ke dalam ruang warna HSV
 hsv_image = cv2.cvtColor(color_image, cv2.COLOR_BGR2HSV)
 
-# Definisikan rentang warna untuk setiap warna
+#Definisikan rentang warna untuk setiap warna
 lower_blue = np.array([90, 100, 100])
 upper_blue = np.array([130, 255, 255])
 
@@ -162,21 +162,22 @@ upper_red1 = np.array([10, 255, 255])
 lower_red2 = np.array([160, 100, 100])
 upper_red2 = np.array([180, 255, 255])
 
-# Deteksi warna biru
+#Deteksi warna biru
 mask_blue = cv2.inRange(hsv_image, lower_blue, upper_blue)
-# Deteksi warna hijau
+#Deteksi warna hijau
 mask_green = cv2.inRange(hsv_image, lower_green, upper_green)
-# Deteksi warna merah
+
+#Deteksi warna merah
 mask_red1 = cv2.inRange(hsv_image, lower_red1, upper_red1)
 mask_red2 = cv2.inRange(hsv_image, lower_red2, upper_red2)
 mask_red = cv2.bitwise_or(mask_red1, mask_red2)
 
-# Gabungkan masker untuk warna merah dan biru
+#Gabungkan masker untuk warna merah dan biru
 mask_red_blue = cv2.bitwise_or(mask_red, mask_blue)
 # Gabungkan masker untuk warna merah dan biru
 mask_red_blue_green = cv2.bitwise_or(cv2.bitwise_or(mask_red, mask_blue), mask_green)
 
-# Plot hasil
+#Plot hasil
 
 #gambar 1
 gray = cv2.cvtColor(color_image, cv2.COLOR_RGB2GRAY)
