@@ -174,7 +174,7 @@ mask_red = cv2.bitwise_or(mask_red1, mask_red2)
 
 #Gabungkan masker untuk warna merah dan biru
 mask_red_blue = cv2.bitwise_or(mask_red, mask_blue)
-# Gabungkan masker untuk warna merah dan biru
+#Gabungkan masker untuk warna merah dan biru
 mask_red_blue_green = cv2.bitwise_or(cv2.bitwise_or(mask_red, mask_blue), mask_green)
 
 #Plot hasil
