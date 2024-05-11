@@ -1,5 +1,4 @@
 # PCD_UTS_202231111_2024_ITPLN.
-
 #Penjelasan UTS pencit
 
 1. MENGIMPOR LIBRARY
@@ -22,6 +21,8 @@ Kode yang ada diatas merupakan beberapa pustaka Python yang umum digunakan:
 
 Selain itu, `%matplotlib inline` adalah perintah ajaib Jupyter Notebook yang menjadikan plot matplotlib ditampilkan langsung di dalam notebook di bawah sel kode yang menghasilkannya. Itu memungkinkan Anda untuk melihat hasil plot tanpa memerlukan jendela pop-up terpisah.
 
+
+
 2. MENDEKLARASIKAN GAMBAR 
 
 color_image = img.imread('Namaku.jpg')
@@ -29,6 +30,7 @@ plt.imshow(color_image)
 
 Kode yang Adalah kode  membaca gambar dengan nama file 'Namaku.jpg' menggunakan fungsi imread dari modul matplotlib.image dan kemudian menampilkan gambar tersebut menggunakan fungsi imshow dari matplotlib.pyplot.
 Nama file 'Namaku' di masukkan sesuai nama yang ada dalam file
+
 
 
 3. MENDEKLARASIKAN DAN MEMBAGI CITRA WARNA 
@@ -69,6 +71,8 @@ jelaskan kode tersebut:
 
 Ini adalah cara untuk membagi citra warna menjadi tiga saluran warna masing-masing dan menampilkan mereka dalam subplot terpisah dengan menggunakan matplotlib di jupyter/Python.
 
+
+
 4. MENDEKLARASIKAN KEMBALI FILE 
 
 color_image = cv2.imread('Namaku.jpg')
@@ -78,6 +82,8 @@ jelaskan kode tersebut:
 1. `cv2.imread('Namaku.jpg')`: Ini adalah panggilan ke fungsi `imread` dari pustaka OpenCV (`cv2`). Fungsi ini digunakan untuk membaca gambar dari file yang disediakan. Parameter yang diberikan adalah nama file gambar, dalam hal ini 'Namaku.jpg'. Fungsi ini mengembalikan array NumPy yang mewakili gambar.
 
 2. `color_image = cv2.imread('Namaku.jpg')`: Hasil dari fungsi `imread` disimpan dalam variabel `color_image`, yang akan berisi representasi citra warna dari file 'Namaku.jpg'.
+
+
 
 5. MENGHITUNG DAN MENDEKLARASIKAN SETIAP WARNA
 
@@ -98,6 +104,8 @@ jelaskan setiap baris kode:
 
 Jadi, dengan kode ini, kita menghitung histogram untuk saluran warna biru, hijau, dan merah secara terpisah, serta histogram untuk seluruh gambar warna.
 
+
+
 6. MENAMPILKAN HISTOGRAM DARI MASING-MASING WARNA
 
 plt.figure(figsize=(12, 8))
@@ -117,7 +125,6 @@ plt.plot(histogram_merah, color='r')
 plt.title('Histogram Merah')
 plt.xlim([0, 256])
 
-
 plt.subplot(2, 2, 4)  # Subplot 4 (bawah kanan)
 plt.plot(histogram_warna.flatten(), color='gray')  # Flatten histogram multi-dimensi
 plt.title('Histogram Warna')
@@ -132,6 +139,8 @@ Kemudian, langkah yang sama diulangi untuk subplot-subplot berikutnya (`subplot(
 Pada subplot terakhir, kita menggunakan `histogram_warna.flatten()` untuk meratakan histogram warna multi-dimensi menjadi satu dimensi sebelum membuat plotnya. Ini dilakukan karena matplotlib hanya dapat membuat plot dari data satu dimensi.
 
 Dengan kode ini, kita menghasilkan gambar dengan empat subplot yang menampilkan histogram dari saluran warna biru, hijau, dan merah, serta histogram untuk seluruh gambar warna.
+
+
 
 7. KONTRAS GAMBAR
 
